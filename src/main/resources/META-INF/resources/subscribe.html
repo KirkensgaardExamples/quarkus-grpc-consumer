@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Subscribe</title>
+</head>
+<body>
+
+<script>
+    let eventSource = new EventSource("/subscribe/Mark")
+
+    eventSource.onmessage = function(event) {
+        console.log("New Message", event.data);
+    }
+</script>
+</body>
+</html>
